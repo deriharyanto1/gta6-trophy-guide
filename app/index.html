@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every one of the 55 official trophies — name, description and grade as PlayStation publishes them — with a guide in our own words, a roadmap to the platinum, and a tracker that saves your progress in this browser.</p>
+  <div class="progress" id="progress" aria-live="polite">
+    <div class="bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    <p id="progressText">0 of 55 earned</p>
+    <p id="gradeCounts" class="counts"></p>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Guide controls">
+  <label class="field">Search <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off"></label>
+  <label class="field">Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="platinum">Platinum</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label class="field">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="field">Show
+    <select id="earnedFilter">
+      <option value="all">Earned + unearned</option>
+      <option value="unearned">Unearned only</option>
+      <option value="earned">Earned only</option>
+    </select>
+  </label>
+  <label class="check"><input id="spoiler" type="checkbox"> Spoiler mode — hide story trophy names until earned</label>
+  <div class="actions">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="importBtn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset tracker</button>
+  </div>
+  <p id="filterNote" class="note" aria-live="polite"></p>
+</nav>
+
+<main>
+  <section id="roadmapSection" aria-labelledby="roadmapHeading">
+    <h2 id="roadmapHeading">Roadmap to the platinum</h2>
+    <p class="sectionNote">Built from the official trophy descriptions: story first, then strangers, then activities and collectibles, then the long grinds. The platinum pops with 100% completion.</p>
+    <ol id="roadmap" class="roadmap"></ol>
+  </section>
+
+  <section id="missablesSection" aria-labelledby="missablesHeading">
+    <h2 id="missablesHeading">Missables — do these when they come up</h2>
+    <p class="sectionNote">8 trophies can be missed: partner moments, one-time story scenes and a retry that must follow its failure at once. The full guide for each one is in the list below.</p>
+    <ul id="missables" class="missables"></ul>
+  </section>
+
+  <section id="listSection" aria-labelledby="listHeading">
+    <h2 id="listHeading">All 55 trophies</h2>
+    <p class="sectionNote">Click a trophy to open its guide. Names and descriptions are PlayStation's official words; every guide is written for this entry and names its sources. 28 of the 55 are hidden on PlayStation until earned.</p>
+    <div id="trophyList" class="trophyList"></div>
+    <p id="emptyNote" class="note" hidden>No trophies match these filters.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Sources: Exophase — GTA VI trophy list · PSNProfiles — GTA VI Trophy Guide · PlayStation — GTA VI trophy list. Guides are this entry's own words; official names and descriptions are PlayStation's. This guide works fully offline — it loads nothing from the network and stores your progress only in this browser (localStorage).</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
